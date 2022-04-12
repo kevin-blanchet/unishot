@@ -53,7 +53,5 @@ private:
     int windowHeight;
     sf::Color bgColor;
     sf::Font defaultFont;
-
-    sf::CircleShape testCircle;
 };
 

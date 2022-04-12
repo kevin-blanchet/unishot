@@ -41,13 +41,6 @@ bool DisplayManager::drawString(sf::Vector2f pos, std::string str, Justification
 
 void DisplayManager::update()
 {
-	pWindow->draw(testCircle);
-
-
-
-
-
-
 	if (this->pWindow == NULL) LM.consoleLog("Err: No Window");
 	pWindow->display();
 	pWindow->clear(this->bgColor);
@@ -99,7 +92,4 @@ DisplayManager::DisplayManager()
 	}
 
 	this->update();
-
-	this->testCircle = sf::CircleShape(100.f);
-	this->testCircle.setFillColor(sf::Color::Green);
 }

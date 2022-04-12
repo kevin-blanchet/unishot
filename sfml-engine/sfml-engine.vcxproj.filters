@@ -57,6 +57,9 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="TestObject.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -91,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="GameObjectList.h">
       <Filter>Fichiers d%27en-tête\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="TestObject.h">
+      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

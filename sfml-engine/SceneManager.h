@@ -21,8 +21,6 @@ public:
     GameObjectList getObjectOfType(std::string type) const;
 
     virtual void update();
-    void fixedUpdate();
-    void draw();
 
     bool markForDelete(GameObject* go);
 private:
