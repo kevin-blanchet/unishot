@@ -11,7 +11,7 @@ class GameManager :
 public:
     static GameManager& getInstance();
 
-    void update();
+    virtual void update();
 
     void setRunning(bool running = false);
     bool isRunning();
