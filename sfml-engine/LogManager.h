@@ -12,6 +12,8 @@ class LogManager :
 public:
     static LogManager& getInstance();
 
+    virtual void update();
+
     void consoleLog(const char* fmt, ...);
     /* TODO : output error log to file */
     void errorLog(const char* fmt, ...);

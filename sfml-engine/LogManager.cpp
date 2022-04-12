@@ -6,6 +6,8 @@
 #include <sstream>
 #include <cstdarg>
 
+void LogManager::update() {}
+
 LogManager& LogManager::getInstance()
 {
     static LogManager* logManager = new LogManager();

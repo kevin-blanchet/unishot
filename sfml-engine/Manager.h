@@ -9,7 +9,7 @@ public:
 	Manager();
 	virtual ~Manager();
 
-	virtual void update();
+	virtual void update() =0;
 
 	std::string getType() const;
 	bool isStarted() const;
