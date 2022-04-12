@@ -41,14 +41,6 @@ bool DisplayManager::drawString(sf::Vector2f pos, std::string str, Justification
 
 void DisplayManager::update()
 {
-	sf::Event event;
-	while (pWindow->pollEvent(event))
-	{
-		if (event.type == sf::Event::Closed) {
-			pWindow->close();
-			GM.setRunning(false);
-		}
-	}
 	pWindow->draw(testCircle);
 
 

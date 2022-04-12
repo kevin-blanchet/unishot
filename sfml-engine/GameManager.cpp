@@ -4,7 +4,7 @@
 #include "LogManager.h"
 //#include "SceneManager.h"
 #include "DisplayManager.h"
-//#include "InputManager.h"
+#include "InputManager.h"
 
 GameManager& GameManager::getInstance()
 {
@@ -17,7 +17,7 @@ void GameManager::update()
     while (this->bRunning) {
         this->delta = this->clock.resetDelta();
         float updateTime = this->delta;
-        //IM.getInput();
+        IM.update();
         //SM.update();
         //while (updateTime >= this->fixedDelta)
         //{
