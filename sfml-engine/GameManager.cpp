@@ -2,7 +2,7 @@
 
 #include "GameManager.h"
 #include "LogManager.h"
-//#include "SceneManager.h"
+#include "SceneManager.h"
 #include "DisplayManager.h"
 #include "InputManager.h"
 
@@ -16,15 +16,8 @@ void GameManager::update()
 {
     while (this->bRunning) {
         this->delta = this->clock.resetDelta();
-        float updateTime = this->delta;
         IM.update();
-        //SM.update();
-        //while (updateTime >= this->fixedDelta)
-        //{
-        //    SM.fixedUpdate();
-        //    updateTime -= this->fixedDelta;
-        //}
-        //SM.draw();
+        SM.update();
         DM.update();
     }
 }
