@@ -1,10 +1,13 @@
 #include <SFML/Graphics.hpp>
+#include "LogManager.h"
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
     sf::CircleShape shape(100.f);
     shape.setFillColor(sf::Color::Green);
+
+    LM.consoleLog("Begin play");
 
     while (window.isOpen())
     {
@@ -19,6 +22,8 @@ int main()
         window.draw(shape);
         window.display();
     }
+
+    LM.consoleLog("End play");
 
     return 0;
 }
