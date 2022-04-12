@@ -154,6 +154,7 @@
   <ItemGroup>
     <ClCompile Include="Clock.cpp" />
     <ClCompile Include="Event.cpp" />
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager.cpp" />
@@ -161,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="Clock.h" />
     <ClInclude Include="Event.h" />
+    <ClInclude Include="GameManager.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
   </ItemGroup>
