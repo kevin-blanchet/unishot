@@ -5,12 +5,18 @@
 class Event
 {
 public:
+	enum class EventType {
+		Undefined = 0
+		, KeyboardEvent
+		, MouseEvent
+	};
+
 	Event();
 	virtual ~Event();
 
-	void setType(std::string newEventType);
-	std::string getType() const;
+	void setType(EventType newEventType);
+	EventType getType() const;
 private:
-	std::string eventType;
+	EventType eventType;
 };
 

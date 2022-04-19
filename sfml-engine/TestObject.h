@@ -15,6 +15,7 @@ public:
     bool eventHandler(const Event* event);
 
     virtual void draw();
+    virtual void update();
 
     sf::CircleShape testCircle;
 };

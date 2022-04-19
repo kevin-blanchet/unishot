@@ -1,4 +1,6 @@
 #include "Manager.h"
+#include "GameObjectList.h"
+#include "SceneManager.h"
 
 Manager::Manager()
 {
@@ -23,19 +25,19 @@ bool Manager::isStarted() const
     return this->bStarted;
 }
 
-//int Manager::onEvent(const Event* pEvent) const
-//{
-//    int count = 0;
-//
-//    std::vector<GameObject*> gameObjects = SM.getAllObjects();
-//    for (auto& i : gameObjects)
-//    {
-//        i->eventHandler(pEvent);
-//        ++count;
-//    }
-//
-//    return count;
-//}
+int Manager::onEvent(const Event* pEvent) const
+{
+    int count = 0;
+
+    GameObjectList gameObjects = SM.getAllObjects();
+    for (auto& i : gameObjects)
+    {
+        i->eventHandler(pEvent);
+        ++count;
+    }
+
+    return count;
+}
 
 void Manager::setType(std::string newType)
 {

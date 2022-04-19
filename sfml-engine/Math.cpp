@@ -6,22 +6,22 @@ namespace V2 {
 
 sf::Vector2f Up()
 {
-    return sf::Vector2f(-1, 0);
+    return sf::Vector2f(0, -1);
 }
 
 sf::Vector2f Down()
 {
-    return sf::Vector2f(1, 0);
+    return sf::Vector2f(0, 1);
 }
 
 sf::Vector2f Left()
 {
-    return sf::Vector2f(0, -1);
+    return sf::Vector2f(-1, 0);
 }
 
 sf::Vector2f Right()
 {
-    return sf::Vector2f(0, 1);
+    return sf::Vector2f(1, 0);
 }
 
 sf::Vector2f One()
@@ -41,7 +41,9 @@ float Length(sf::Vector2f v)
 
 sf::Vector2f Normalize(sf::Vector2f v)
 {
-    return v / Length(v);
+    if(Length(v) != 0)
+        return v / Length(v);
+    return Zero();
 }
 
 float Distance(sf::Vector2f v1, sf::Vector2f v2)
