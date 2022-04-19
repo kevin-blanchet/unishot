@@ -2,19 +2,19 @@
 
 Event::Event()
 {
-	setType("undefined");
+	setType(Event::EventType::Undefined);
 }
 
 Event::~Event()
 {
 }
 
-void Event::setType(std::string newEventType)
+void Event::setType(Event::EventType newEventType)
 {
 	this->eventType = newEventType;
 }
 
-std::string Event::getType() const
+Event::EventType Event::getType() const
 {
 	return this->eventType;
 }

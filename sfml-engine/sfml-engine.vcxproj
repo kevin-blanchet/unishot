@@ -158,10 +158,12 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="KeyboardEvent.cpp" />
     <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Manager.cpp" />
     <ClCompile Include="Math.cpp" />
+    <ClCompile Include="MouseEvent.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="TestObject.cpp" />
   </ItemGroup>
@@ -172,10 +174,12 @@
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectList.h" />
+    <ClInclude Include="KeyboardEvent.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="InputManager.h" />
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="Manager.h" />
+    <ClInclude Include="MouseEvent.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="TestObject.h" />
   </ItemGroup>

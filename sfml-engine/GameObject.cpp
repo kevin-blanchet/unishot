@@ -2,14 +2,15 @@
 
 #include "SceneManager.h"
 #include "Math.h"
+#include "LogManager.h"
 
 GameObject::GameObject()
 {
 	this->setId(0);
 	this->setType("GameObject");
 	this->setPosition(0, 0);
+	this->setSpeed(0);
 	this->setDisplayLayer(MAX_DISPLAY_LAYER / 2);
-	this->setVelocity({ 0,0 });
 
 	SM.insertGameObject(this);
 }
@@ -87,7 +88,7 @@ void GameObject::setVelocity(sf::Vector2f newVelocity)
 
 sf::Vector2f GameObject::getVelocity()
 {
-	return this->direction * this->speed;
+	return Math::V2::Multiply(this->direction , this->speed);
 }
 
 void GameObject::setDirection(sf::Vector2f newDirection)

@@ -14,7 +14,7 @@ public:
 	std::string getType() const;
 	bool isStarted() const;
 
-	//int onEvent(const Event* pEvent) const;
+	int onEvent(const Event* pEvent) const;
 
 protected:
 	void setType(std::string newType);

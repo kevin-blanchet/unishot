@@ -22,6 +22,9 @@
     <Filter Include="Fichiers d%27en-tête\GameObjects">
       <UniqueIdentifier>{098f7a3c-5436-4dad-a94b-824094e1ae06}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\Events">
+      <UniqueIdentifier>{99739ff4-8929-4d2f-a7d9-72499ee4889e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -60,6 +63,12 @@
     <ClCompile Include="TestObject.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="KeyboardEvent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseEvent.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.h">
@@ -72,9 +81,6 @@
       <Filter>Fichiers d%27en-tête\Managers</Filter>
     </ClInclude>
     <ClInclude Include="Clock.h">
-      <Filter>Fichiers d%27en-tête\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="Event.h">
       <Filter>Fichiers d%27en-tête\Systems</Filter>
     </ClInclude>
     <ClInclude Include="DisplayManager.h">
@@ -97,6 +103,15 @@
     </ClInclude>
     <ClInclude Include="TestObject.h">
       <Filter>Fichiers d%27en-tête\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyboardEvent.h">
+      <Filter>Fichiers d%27en-tête\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Event.h">
+      <Filter>Fichiers d%27en-tête\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseEvent.h">
+      <Filter>Fichiers d%27en-tête\Events</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
