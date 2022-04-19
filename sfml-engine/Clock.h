@@ -8,10 +8,10 @@ public:
 	Clock();
 
 	float getDelta();
-	long int uGetDelta();
+	sf::Int64 uGetDelta();
 
 	float resetDelta();
-	long int uResetDelta();
+	sf::Int64 uResetDelta();
 private:
 	sf::Clock clock;
 };
