@@ -14,7 +14,6 @@ TestObject::TestObject()
     }
     player.setSmooth(true);
 
-    setSpeed(10);
     deltaAnim = 0.f;
     walking = true;
     currentAnimIndex = 0;
@@ -50,42 +49,34 @@ bool TestObject::eventHandler(const Event* event)
             break;
         case sf::Keyboard::Z:
             if (kEvent->getKeyboardAction() == sf::Event::EventType::KeyPressed) {
-                //setVelocity(Math::V2::Up() + getVelocity());
                 isMovingUp = true;
             }
             if (kEvent->getKeyboardAction() == sf::Event::EventType::KeyReleased) {
-                //setVelocity(getVelocity() - Math::V2::Up());
                 isMovingUp = false;
             }
             
             break;
         case sf::Keyboard::S:
             if (kEvent->getKeyboardAction() == sf::Event::EventType::KeyPressed) {
-                //setVelocity(Math::V2::Down() + getVelocity());
                 isMovingDown = true;
             }
             if (kEvent->getKeyboardAction() == sf::Event::EventType::KeyReleased) {
-                //setVelocity(getVelocity() - Math::V2::Down());
                 isMovingDown = false;
             }
             break;
         case sf::Keyboard::Q:
             if (kEvent->getKeyboardAction() == sf::Event::EventType::KeyPressed) {
-                //setVelocity(Math::V2::Left() + getVelocity());
                 isMovingLeft = true;
             }
             if (kEvent->getKeyboardAction() == sf::Event::EventType::KeyReleased) {
-                //setVelocity(getVelocity() - Math::V2::Left());
                 isMovingLeft = false;
             }
             break;
         case sf::Keyboard::D:
             if (kEvent->getKeyboardAction() == sf::Event::EventType::KeyPressed) {
-                //setVelocity(Math::V2::Right() + getVelocity());
                 isMovingRight = true;
             }
             if (kEvent->getKeyboardAction() == sf::Event::EventType::KeyReleased) {
-                //setVelocity(getVelocity() - Math::V2::Right());
                 isMovingRight = false;
             }
             break;
@@ -148,7 +139,6 @@ void TestObject::update()
         setVelocity(Math::V2::Zero());
         walking = true;
     }
-    LM.consoleLog("%f", getSpeed());
     sf::Vector2f position = getPosition();
     setPosition(position + getVelocity());
     sprite_player.setPosition(getPosition());
