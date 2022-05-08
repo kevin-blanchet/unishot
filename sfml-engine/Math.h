@@ -1,7 +1,5 @@
 #pragma once
 
-#include <math.h>
-
 #include <SFML/System/Vector2.hpp>
 
 namespace Math {
@@ -28,6 +26,9 @@ sf::Vector2f Multiply(sf::Vector2f v, float f);
 sf::Vector2f Divide(sf::Vector2f v, float f);
 
 bool Equals(sf::Vector2f v1, sf::Vector2f v2);
+
+float VectToDeg(sf::Vector2f v);
+float VectToRad(sf::Vector2f v);
 
 }
 

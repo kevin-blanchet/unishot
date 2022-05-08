@@ -1,5 +1,8 @@
 #include "Math.h"
 
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 namespace Math {
 
 namespace V2 {
@@ -84,6 +87,20 @@ sf::Vector2f Divide(sf::Vector2f v, float f)
 bool Equals(sf::Vector2f v1, sf::Vector2f v2)
 {
     return (v1.x == v2.x && v1.y == v2.y);
+}
+
+float VectToDeg(sf::Vector2f v)
+{
+    return VectToRad(v) * 180 / M_PI;
+}
+
+float VectToRad(sf::Vector2f v)
+{
+    if (asinf(Normalize(v).x) > 0)
+    {
+        return -acosf(Normalize(v).y);
+    }
+    return acosf(Normalize(v).y);
 }
 
 }
