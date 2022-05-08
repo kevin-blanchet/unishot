@@ -5,6 +5,7 @@
 #include "Math.h"
 
 #include "LogManager.h"
+#include "Projectile.h"
 #include "GameManager.h"
 
 TestObject::TestObject()
@@ -24,8 +25,10 @@ TestObject::TestObject()
     sprite_player.setTexture(player);
     sprite_player.setTextureRect(sf::IntRect(getCurrentAnimationIndex() * 64, getCurrentDirection() * 64, 64, 64));
     
-    testCircle = sf::CircleShape(100.f);
+    testCircle = sf::CircleShape(50.f);
     testCircle.setFillColor(sf::Color::Green);
+    testCircle.setOrigin({ 50.f, 50.f });
+    m_pos = sf::Vector2f(0, 0);
 }
 
 TestObject::~TestObject()
@@ -90,8 +93,13 @@ bool TestObject::eventHandler(const Event* event)
         const MouseEvent* mEvent = dynamic_cast<const MouseEvent*>(event);
         switch (mEvent->getMouseAction())
         {
+        case sf::Event::EventType::MouseButtonPressed:
+            if (mEvent->getButton() == sf::Mouse::Button::Left) {
+                fire();
+            }
+            break;
         case sf::Event::EventType::MouseMoved:
-            setPosition(mEvent->getMousePosition());
+            m_pos = mEvent->getMousePosition();
             break;
         default:
             break;
@@ -106,7 +114,8 @@ bool TestObject::eventHandler(const Event* event)
 
 void TestObject::draw()
 {
-    //DM.getWindow()->draw(testCircle);
+    sprite_player.setPosition(getPosition());
+
     DM.getWindow()->draw(sprite_player);
 }
 
@@ -141,7 +150,8 @@ void TestObject::update()
     }
     sf::Vector2f position = getPosition();
     setPosition(position + getVelocity());
-    sprite_player.setPosition(getPosition());
+    go_r.setPosition(getPosition());
+    go_r.setDirection(Math::V2::Normalize(m_pos - getPosition()));
 
     deltaAnim += GM.getDelta();
     // std::cout << anim.x << std::endl;
@@ -152,9 +162,6 @@ void TestObject::update()
         currentAnimIndex = ++currentAnimIndex % getCurrentAnimationSize();
         deltaAnim -= 0.2f;
     }
-
-
-
 }
 
 int TestObject::getCurrentAnimationIndex()
@@ -188,7 +195,10 @@ TestObject::Dir TestObject::getCurrentDirection()
     else {
         return Down;
     }
+}
 
-
-
+void TestObject::fire()
+{
+    sf::Vector2f pDirection = Math::V2::Normalize(m_pos - getPosition());
+    Projectile* p = new Projectile(getPosition(), pDirection * 50.f);
 }
