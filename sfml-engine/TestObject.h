@@ -24,7 +24,6 @@ public:
 
     sf::Vector2f m_pos;
     
-    sf::CircleShape testCircle;
     sf::Texture player;
     sf::Sprite sprite_player;
     enum Dir {

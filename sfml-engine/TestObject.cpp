@@ -24,10 +24,7 @@ TestObject::TestObject()
 
     sprite_player.setTexture(player);
     sprite_player.setTextureRect(sf::IntRect(getCurrentAnimationIndex() * 64, getCurrentDirection() * 64, 64, 64));
-    
-    testCircle = sf::CircleShape(50.f);
-    testCircle.setFillColor(sf::Color::Green);
-    testCircle.setOrigin({ 50.f, 50.f });
+    sprite_player.setOrigin({ 32.f, 25.f });
     m_pos = sf::Vector2f(0, 0);
 }
 
