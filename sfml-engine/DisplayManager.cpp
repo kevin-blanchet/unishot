@@ -85,7 +85,8 @@ DisplayManager::DisplayManager()
 
 	this->pWindow = new sf::RenderWindow(sf::VideoMode(this->windowWidth, this->windowHeight), WINDOW_TITLE_DEFAULT, WINDOW_STYLE_DEFAULT);
 	this->pWindow->setVerticalSyncEnabled(WINDOW_VSYNC_DEFAULT);
-	this->pWindow->setFramerateLimit(WINDOW_FRAMERATE_DEFAULT);
+	this->pWindow->setFramerateLimit(WINDOW_FRAMERATE_DEFAULT); 
+	this->pWindow->setMouseCursorVisible(false);
 
 	if (!this->defaultFont.loadFromFile(DEFAULT_FONT_FILE)) {
 		LM.errorLog("failed to load font");
