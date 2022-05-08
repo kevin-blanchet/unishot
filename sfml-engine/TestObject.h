@@ -2,6 +2,7 @@
 #include "GameObject.h"
 
 #include "DisplayManager.h"
+#include "Rifle.h"
 
 #include <SFML/Graphics/CircleShape.hpp>
 
@@ -17,6 +18,10 @@ public:
     virtual void draw();
     virtual void update();
 
-    sf::CircleShape testCircle;
-};
+    void fire();
 
+    sf::Vector2f m_pos;
+
+    sf::CircleShape testCircle;
+    Rifle go_r;
+};

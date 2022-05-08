@@ -4,11 +4,14 @@
 #include "Math.h"
 
 #include "LogManager.h"
+#include "Projectile.h"
 
 TestObject::TestObject()
 {
-    testCircle = sf::CircleShape(100.f);
+    testCircle = sf::CircleShape(50.f);
     testCircle.setFillColor(sf::Color::Green);
+    testCircle.setOrigin({ 50.f, 50.f });
+    m_pos = sf::Vector2f(0, 0);
 }
 
 TestObject::~TestObject()
@@ -66,8 +69,13 @@ bool TestObject::eventHandler(const Event* event)
         const MouseEvent* mEvent = dynamic_cast<const MouseEvent*>(event);
         switch (mEvent->getMouseAction())
         {
+        case sf::Event::EventType::MouseButtonPressed:
+            if (mEvent->getButton() == sf::Mouse::Button::Left) {
+                fire();
+            }
+            break;
         case sf::Event::EventType::MouseMoved:
-            setPosition(mEvent->getMousePosition());
+            m_pos = mEvent->getMousePosition();
             break;
         default:
             break;
@@ -82,6 +90,8 @@ bool TestObject::eventHandler(const Event* event)
 
 void TestObject::draw()
 {
+    testCircle.setPosition(getPosition());
+
     DM.getWindow()->draw(testCircle);
 }
 
@@ -89,5 +99,12 @@ void TestObject::update()
 {
     sf::Vector2f position = getPosition();
     setPosition(position + getVelocity());
-    testCircle.setPosition(getPosition());
+    go_r.setPosition(getPosition());
+    go_r.setDirection(Math::V2::Normalize(m_pos - getPosition()));
+}
+
+void TestObject::fire()
+{
+    sf::Vector2f pDirection = Math::V2::Normalize(m_pos - getPosition());
+    Projectile* p = new Projectile(getPosition(), pDirection * 50.f);
 }
