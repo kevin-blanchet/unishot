@@ -9,6 +9,7 @@ public:
 		Undefined = 0
 		, KeyboardEvent
 		, MouseEvent
+		, CollisionEvent
 	};
 
 	Event();
