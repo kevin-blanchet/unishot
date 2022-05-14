@@ -69,6 +69,10 @@
     <ClCompile Include="MouseEvent.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Enemies.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Spawner.cpp">
     <ClCompile Include="Projectile.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -122,6 +126,11 @@
     <ClInclude Include="MouseEvent.h">
       <Filter>Fichiers d%27en-tête\Events</Filter>
     </ClInclude>
+    <ClInclude Include="Enemies.h">
+      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner.h">
+      <Filter>Fichiers d%27en-tête</Filter>
     <ClInclude Include="Projectile.h">
       <Filter>Fichiers d%27en-tête\GameObjects</Filter>
     </ClInclude>
