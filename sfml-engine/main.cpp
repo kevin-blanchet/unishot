@@ -4,6 +4,9 @@
 #include "TestObject.h"
 #include "Enemies.h"
 #include "Spawner.h"
+#include "MousePointer.h"
+//#include "Rifle.h"
+#include "Math.h"
 
 int main()
 {
@@ -15,6 +18,7 @@ int main()
     Spawner sp;
     sp.spawnEnemy(12);
     
+    MousePointer mp;
 
     GM.update();
 

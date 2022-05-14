@@ -73,6 +73,13 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Spawner.cpp">
+    <ClCompile Include="Projectile.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MousePointer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Rifle.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -124,6 +131,14 @@
     </ClInclude>
     <ClInclude Include="Spawner.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    <ClInclude Include="Projectile.h">
+      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="MousePointer.h">
+      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Rifle.h">
+      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

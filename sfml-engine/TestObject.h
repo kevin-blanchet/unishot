@@ -4,6 +4,7 @@
 #include "GameObject.h"
 
 #include "DisplayManager.h"
+#include "Rifle.h"
 
 #include <SFML/Graphics/CircleShape.hpp>
 
@@ -19,7 +20,10 @@ public:
     virtual void draw();
     virtual void update();
 
-    sf::CircleShape testCircle;
+    void fire();
+
+    sf::Vector2f m_pos;
+    
     sf::Texture player;
     sf::Sprite sprite_player;
     enum Dir {
@@ -40,12 +44,9 @@ public:
     Dir animDirection;
     float deltaAnim;
 
-    //sf::Vector2i anim;
-    //bool reset = false;
-
 private:
     int getCurrentAnimationIndex();
     int getCurrentAnimationSize();
     TestObject::Dir getCurrentDirection();
+    Rifle go_r;
 };
-
