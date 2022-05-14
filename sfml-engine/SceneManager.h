@@ -19,6 +19,7 @@ public:
     void removeGameObject(GameObject* go);
     GameObjectList getAllObjects() const;
     GameObjectList getObjectOfType(std::string type) const;
+    GameObjectList getCollisions(GameObject* p_go, sf::Vector2f pos) const;
 
     virtual void update();
 
