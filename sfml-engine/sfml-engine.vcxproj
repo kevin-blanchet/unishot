@@ -152,7 +152,48 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="CollisionEvent.cpp" />
+    <ClCompile Include="DisplayManager.cpp" />
+    <ClCompile Include="Enemies.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="KeyboardEvent.cpp" />
+    <ClCompile Include="LogManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="MouseEvent.cpp" />
+    <ClCompile Include="MousePointer.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="Rifle.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Spawner.cpp" />
+    <ClCompile Include="TestObject.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Clock.h" />
+    <ClInclude Include="CollisionEvent.h" />
+    <ClInclude Include="DisplayManager.h" />
+    <ClInclude Include="Enemies.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectList.h" />
+    <ClInclude Include="KeyboardEvent.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="LogManager.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="MouseEvent.h" />
+    <ClInclude Include="MousePointer.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="Rifle.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Spawner.h" />
+    <ClInclude Include="TestObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
