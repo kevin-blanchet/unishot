@@ -47,6 +47,20 @@ GameObjectList SceneManager::getObjectOfType(std::string type) const
     return returnVector;
 }
 
+GameObjectList SceneManager::getCollisions(GameObject* p_go, sf::Vector2f pos) const
+{
+    GameObjectList collisions;
+
+    for (auto& i : aliveList)
+    {
+        if (i != p_go) {
+            //todo: check for collisions
+        }
+    }
+
+    return GameObjectList();
+}
+
 void SceneManager::update()
 {
     float updateTime = GM.getDelta();
