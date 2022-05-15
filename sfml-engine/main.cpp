@@ -1,24 +1,28 @@
 #include <SFML/Graphics.hpp>
+#include "LogManager.h"
+#include "GameManager.h"
+#include "TestObject.h"
+#include "Enemies.h"
+#include "Spawner.h"
+#include "MousePointer.h"
+//#include "Rifle.h"
+#include "Math.h"
 
 int main()
 {
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+    LM.consoleLog("Begin play");
 
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
+    TestObject test;
+    Enemies ennemi;
+    Spawner sp;
+    sp.spawnEnemy(12);
+    
+    MousePointer mp;
+
+    GM.update();
+
+    LM.consoleLog("End play");
 
     return 0;
 }
