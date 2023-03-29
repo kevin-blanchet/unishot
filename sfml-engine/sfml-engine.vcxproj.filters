@@ -1,150 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Fichiers sources">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Fichiers de ressources">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Managers">
-      <UniqueIdentifier>{fd593e24-5598-4986-b2be-110596b7fb93}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Systems">
-      <UniqueIdentifier>{6d4378b7-940c-49c4-a4c7-ff21dd024aa0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\GameObjects">
-      <UniqueIdentifier>{098f7a3c-5436-4dad-a94b-824094e1ae06}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers d%27en-tête\Events">
-      <UniqueIdentifier>{99739ff4-8929-4d2f-a7d9-72499ee4889e}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="Clock.cpp" />
+    <ClCompile Include="CollisionEvent.cpp" />
+    <ClCompile Include="DisplayManager.cpp" />
+    <ClCompile Include="Enemies.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="InputManager.cpp" />
+    <ClCompile Include="KeyboardEvent.cpp" />
+    <ClCompile Include="LogManager.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Manager.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="MouseEvent.cpp" />
+    <ClCompile Include="MousePointer.cpp" />
+    <ClCompile Include="Projectile.cpp" />
+    <ClCompile Include="Rifle.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="Spawner.cpp" />
+    <ClCompile Include="TestObject.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Manager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Event.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="LogManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Clock.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="GameManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="DisplayManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="InputManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Math.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneManager.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="TestObject.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="KeyboardEvent.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="MouseEvent.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemies.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Spawner.cpp">
-    <ClCompile Include="Projectile.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="MousePointer.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="Rifle.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-    <ClCompile Include="CollisionEvent.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="GameManager.h">
-      <Filter>Fichiers d%27en-tête\Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="LogManager.h">
-      <Filter>Fichiers d%27en-tête\Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="Manager.h">
-      <Filter>Fichiers d%27en-tête\Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="Clock.h">
-      <Filter>Fichiers d%27en-tête\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="DisplayManager.h">
-      <Filter>Fichiers d%27en-tête\Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="InputManager.h">
-      <Filter>Fichiers d%27en-tête\Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="Math.h">
-      <Filter>Fichiers d%27en-tête\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObject.h">
-      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="SceneManager.h">
-      <Filter>Fichiers d%27en-tête\Managers</Filter>
-    </ClInclude>
-    <ClInclude Include="GameObjectList.h">
-      <Filter>Fichiers d%27en-tête\Systems</Filter>
-    </ClInclude>
-    <ClInclude Include="TestObject.h">
-      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyboardEvent.h">
-      <Filter>Fichiers d%27en-tête\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="Event.h">
-      <Filter>Fichiers d%27en-tête\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="MouseEvent.h">
-      <Filter>Fichiers d%27en-tête\Events</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemies.h">
-      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Spawner.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    <ClInclude Include="Projectile.h">
-      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="MousePointer.h">
-      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="Rifle.h">
-      <Filter>Fichiers d%27en-tête\GameObjects</Filter>
-    </ClInclude>
-    <ClInclude Include="CollisionEvent.h">
-      <Filter>Fichiers d%27en-tête\Events</Filter>
-    </ClInclude>
+    <ClInclude Include="Clock.h" />
+    <ClInclude Include="CollisionEvent.h" />
+    <ClInclude Include="DisplayManager.h" />
+    <ClInclude Include="Enemies.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="GameManager.h" />
+    <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectList.h" />
+    <ClInclude Include="KeyboardEvent.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="InputManager.h" />
+    <ClInclude Include="LogManager.h" />
+    <ClInclude Include="Manager.h" />
+    <ClInclude Include="MouseEvent.h" />
+    <ClInclude Include="MousePointer.h" />
+    <ClInclude Include="Projectile.h" />
+    <ClInclude Include="Rifle.h" />
+    <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="Spawner.h" />
+    <ClInclude Include="TestObject.h" />
   </ItemGroup>
 </Project>
